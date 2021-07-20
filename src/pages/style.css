@@ -1,0 +1,23 @@
+.orgContainer{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.issuesContainer{
+    width: 60vw;
+    height: 80vh;
+
+}
+
+@media only screen  and (max-width:1000px){
+    .issuesContainer{
+        width: 90vw;
+    }
+}
+@media only screen  and (max-width:650px){
+    .issuesContainer{
+        width: 90vw;
+    }
+}

@@ -1,0 +1,20 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  background-color: black;
+  color: white;
+}
+
+:root{
+  --lightBlue:#0e42f1;
+  --lightestBlue:#567aea;
+  --blue:#121ded;
+  --grey:#47433d;
+  --lightgrey:#898075;
+  --lightYellow:#e5f00e;
+  --yellow:#ebf30e;
+  --git:#ca5e3c;
+  --font-mono-:"SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
+  --font-sans-:"Calibre","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
+}
