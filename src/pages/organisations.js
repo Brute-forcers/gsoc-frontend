@@ -16,7 +16,6 @@ const Organisations = () => {
                 <Issue setPreview={setPreview}/>
                 <Issue setPreview={setPreview}/>
                 <Issue setPreview={setPreview}/>
-                <Issue setPreview={setPreview}/>
             </div>
         </div>)}
         
