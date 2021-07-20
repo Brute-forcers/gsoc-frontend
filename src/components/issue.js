@@ -7,7 +7,7 @@ const Issue = ({setPreview}) => {
     }
     return (
         <article className="issueContainer">
-         <img src="./static/git-icon.svg" className="svg"></img>
+         <img src="./static/git-icon.svg" alt="Organization icon" className="svg"/>
          <h3>#24536</h3>
          <p className="desktop-only">This is an issue related to this. Please fix the issue.</p>
          <span>Good first issue</span>
