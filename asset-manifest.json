@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/gsoc-frontend/static/css/main.6796c792.chunk.css",
+    "main.js": "/gsoc-frontend/static/js/main.c0a6fde8.chunk.js",
+    "main.js.map": "/gsoc-frontend/static/js/main.c0a6fde8.chunk.js.map",
+    "runtime-main.js": "/gsoc-frontend/static/js/runtime-main.2e8a45a6.js",
+    "runtime-main.js.map": "/gsoc-frontend/static/js/runtime-main.2e8a45a6.js.map",
+    "static/js/2.d68194a7.chunk.js": "/gsoc-frontend/static/js/2.d68194a7.chunk.js",
+    "static/js/2.d68194a7.chunk.js.map": "/gsoc-frontend/static/js/2.d68194a7.chunk.js.map",
+    "static/js/3.c34abd98.chunk.js": "/gsoc-frontend/static/js/3.c34abd98.chunk.js",
+    "static/js/3.c34abd98.chunk.js.map": "/gsoc-frontend/static/js/3.c34abd98.chunk.js.map",
+    "index.html": "/gsoc-frontend/index.html",
+    "static/css/main.6796c792.chunk.css.map": "/gsoc-frontend/static/css/main.6796c792.chunk.css.map",
+    "static/js/2.d68194a7.chunk.js.LICENSE.txt": "/gsoc-frontend/static/js/2.d68194a7.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2e8a45a6.js",
+    "static/js/2.d68194a7.chunk.js",
+    "static/css/main.6796c792.chunk.css",
+    "static/js/main.c0a6fde8.chunk.js"
+  ]
+}
