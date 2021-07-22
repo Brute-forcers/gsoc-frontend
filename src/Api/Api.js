@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-    baseURL: "https://gsoc-api.herokuapp.com"
+    baseURL: "https://gsoc-api.herokuapp.com/api"
 });
 
 
