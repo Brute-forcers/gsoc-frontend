@@ -1,13 +1,15 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import "./style.css";
+import {Context} from "../Store";
+
 const SelectOrg = () => {
+    const [Orgs] = useContext(Context);
+    console.log(Orgs);
     return (
         <article className="dropContainer">
             <select className="dropdown">
                 <option>Select an Organisation</option>
-                <option value="Mozilla">Mozilla</option>
-                <option value="Brute-forcers">Brute-forcers</option>
-                <option value="Checkstyle">Checkstyle</option>
+                {Orgs.map((org, index) => <option key={index}>{org}</option>)}
             </select>
             <button type="submit" className="dropBtn">Submit</button>
         </article>
