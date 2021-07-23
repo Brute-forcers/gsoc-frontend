@@ -4,13 +4,14 @@ import {Context} from "../Store";
 
 const SelectOrg = () => {
     const [Orgs] = useContext(Context);
-    const [selectedOrg,setSelectedOrg] = useState("Select an Organisation")
+    const [,,,,, setOrgName] = useContext(Context);
+    const [selectedOrg, setSelectedOrg] = useState("Select an Organisation")
     console.log(Orgs);
-    const handleSubmit = (event)=>{
+    const handleSubmit = (event) => {
         event.preventDefault();
-
+        setOrgName(Orgs[selectedOrg-1]);
     }
-    const handleChange=(event)=>{
+    const handleChange = (event) => {
         const val = event.target.value;
         setSelectedOrg(val)
         console.log(val);
@@ -19,9 +20,9 @@ const SelectOrg = () => {
         <article className="dropContainer">
             <select className="dropdown" value={selectedOrg} onChange={handleChange}>
                 <option value={0}>Select an Organisation</option>
-                {Orgs.map((org, index) => <option value={index+1} key={index}>{org}</option>)}
+                {Orgs.map((org, index) => <option value={index + 1} key={index}>{org}</option>)}
             </select>
-            <button type="submit" onSubmit={handleSubmit} className="dropBtn">Submit</button>
+            <button type="submit" onClick={handleSubmit} className="dropBtn">Submit</button>
         </article>
     )
 }
