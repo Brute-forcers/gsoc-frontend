@@ -1,12 +1,12 @@
 import React, {createContext, useEffect, useState} from "react";
-import {getIssues, getIssuesWithRepos, getOrgs} from "./Api/Api";
+import {getIssuesWithRepos, getOrgs} from "./Api/Api";
 
 export const Context = createContext();
 
 export const Store = ({children}) => {
     const [Orgs, setOrgs] = useState([]);
     const [Issues, setIssues] = useState([{repoName: "checkstyle", issues: []}]);
-    const [orgName,setOrgName] = useState('zulip');
+    const [orgName, setOrgName] = useState('zulip');
     useEffect(() => {
         getOrgs().then(res => {
             setOrgs(res.data);
@@ -16,7 +16,8 @@ export const Store = ({children}) => {
             setIssues(res.data.repoDetails)
             console.log(Issues)
         })
-    }, [])
+        // eslint-disable-next-line
+    },[])
     useEffect(() => {
         getIssuesWithRepos(orgName).then(res => {
             setIssues(res.data.repoDetails);
@@ -25,7 +26,7 @@ export const Store = ({children}) => {
     }, [orgName]);
 
     return (
-        <Context.Provider value={[Orgs, setOrgs, Issues, setIssues,orgName,setOrgName]}>
+        <Context.Provider value={[Orgs, setOrgs, Issues, setIssues, orgName, setOrgName]}>
             {children}
         </Context.Provider>
     )
