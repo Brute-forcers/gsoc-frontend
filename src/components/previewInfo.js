@@ -1,6 +1,6 @@
 import React from 'react'
 
-const PreviewInfo = ({setPreview}) => {
+const PreviewInfo = ({setPreview,detail}) => {
 
     const clickHandler = () =>{
       setPreview(false);
@@ -9,7 +9,7 @@ const PreviewInfo = ({setPreview}) => {
     return (
         <div className="previewInfo">
             <article className="previewCon">
-                <h1>All Info about the issue</h1>
+                <div>{detail}</div>
             </article>
             <button onClick={clickHandler}>Return</button>
         </div>

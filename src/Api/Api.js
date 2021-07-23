@@ -8,3 +8,4 @@ const api = axios.create({
 export const getRepos = (orgName) => api.get(`/orgs/${orgName}`);
 export const getIssues = (orgName, repoName) => api.get(`/orgs/${orgName}/${repoName}`);
 export const getOrgs = () => api.get(`/orgs`);
+export const getIssuesWithRepos = (orgName)=> api.get(`/orgsIssues/${orgName}`);

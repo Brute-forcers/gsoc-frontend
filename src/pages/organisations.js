@@ -1,26 +1,17 @@
-import React from 'react'
-import Issue from '../components/issue';
-import PreviewInfo from '../components/previewInfo';
+import React, {useContext} from 'react'
 import SelectOrg from '../components/selectorg';
 import "./style.css";
+import {Context} from "../Store";
+import Repos from "../components/Repos";
 
 const Organisations = () => {
-    const [preview,setPreview] = React.useState(false);
+    const [, , Issues, setIssues] = useContext(Context);
+    console.log(Issues);
 
-    return (
-        <>
-        {preview ? <PreviewInfo setPreview={setPreview}/> : (
-        <div className="orgContainer">
-            <SelectOrg/>
-            <div className="issuesContainer">
-                <Issue setPreview={setPreview}/>
-                <Issue setPreview={setPreview}/>
-                <Issue setPreview={setPreview}/>
-            </div>
-        </div>)}
-        
-        </>
-    )
+    return (<div className="orgContainer">
+        <SelectOrg/>
+        {Issues.map((repo,index)=>{return<Repos repo = {repo} key={index} />})}
+    </div>)
 }
 
 export default Organisations;
