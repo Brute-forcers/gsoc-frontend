@@ -5,12 +5,14 @@ import {Context} from "../Store";
 import Repos from "../components/Repos";
 
 const Organisations = () => {
-    const [, , Issues, setIssues] = useContext(Context);
+    const [, , Issues] = useContext(Context);
     console.log(Issues);
 
     return (<div className="orgContainer">
         <SelectOrg/>
-        {Issues.map((repo,index)=>{return<Repos repo = {repo} key={index} />})}
+        {Issues.map((repo, index) => {
+            return <Repos repo={repo} key={index}/>
+        })}
     </div>)
 }
 
