@@ -9,7 +9,7 @@ const Repos = ({repo}) => {
     const [issueWorking,setIssueWorking] = useState(repo.issues[0])
     return (
         <>
-            {preview ? <PreviewInfo setPreview={setPreview} detail = {issueWorking.title}/> : (
+            {preview ? <PreviewInfo setPreview={setPreview} detail = {issueWorking}/> : (
                 <div className="repoContainer">
                     <h3>{repo.repoName}</h3>
                     <div className="issuesContainer">
