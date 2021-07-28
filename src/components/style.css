@@ -181,7 +181,7 @@
 }
 .previewCon > h1{
     background-color: var(--grey);
-    
+
 }
 @media only screen  and (max-width:650px){
    .previewCon{
@@ -194,4 +194,17 @@
     width: fit-content;
     background: #0e42f1;
     padding: 25px;
+}
+
+.mdPar{
+    width: 50vw;
+    object-fit: contain;
+    background: none;
+}
+.mdPar p{
+    background: none;
+}
+.mdPar p a{
+    width: 50vw;
+    background: none;
 }
