@@ -70,9 +70,10 @@
 
 .issueContainer{
     width: 100%;
-    min-height: 4rem;
+    min-height: fit-content;
     border-radius: 10px;
     display: flex;
+    padding: 2vh 0;
     justify-content: space-evenly;
     align-items: center;
     background-color: var(--grey);
@@ -171,7 +172,7 @@
 }
 
 .previewCon{
-    width: 50vw;
+    width: 60vw;
     height: 70vh;
     border: 2px solid white;
     background-color: var(--grey);
@@ -188,11 +189,33 @@
        width: 90%;
    }
 }
+/* width */
+::-webkit-scrollbar {
+    width: 5px
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: blue;
+    border-radius: 10px;
+}
+
+::-webkit-resizer{
+    size: 1px;
+}
 
 .repoContainer{
-    height: auto;
-    width: fit-content;
-    background: #0e42f1;
+    margin: 5vh;
+    border-radius: 2rem;
+    width: 70vw;
+    border: #0e42f1 1px solid;
+    overflow: auto;
     padding: 25px;
 }
 
@@ -202,9 +225,24 @@
     background: none;
 }
 .mdPar p{
-    background: none;
-}
-.mdPar p a{
+    font-size: 1.3rem;
     width: 50vw;
     background: none;
+    margin: 2vh 0;
+}
+.mdPar p a{
+    font-size: 1.3rem;
+    width: 40vw;
+    margin: 2vh 0;
+    background: none;
+    word-wrap: break-word;
+}
+
+.repoContainer h2{
+    margin: 1vh 0 7.5vh;
+    text-align: center;
+}
+
+.repoContainer h4{
+    text-align: center;
 }

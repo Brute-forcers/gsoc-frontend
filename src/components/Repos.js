@@ -8,17 +8,17 @@ const Repos = ({repo}) => {
     const [preview, setPreview] = React.useState(false);
     const [issueWorking,setIssueWorking] = useState(repo.issues[0])
     return (
-        <>
+        <div className="repoContainer">
             {preview ? <PreviewInfo setPreview={setPreview} detail = {issueWorking}/> : (
-                <div className="repoContainer">
-                    <h3>{repo.repoName}</h3>
+                <div>
+                    <h2>{repo.repoName}</h2>
                     <div className="issuesContainer">
                         {Issues.map((issue, index) => {
                             return <Issue key={index} issue={issue} setPreview={setPreview} setWorking = {setIssueWorking}/>
                         })}
                     </div>
                 </div>)}
-        </>
+        </div>
     )
 }
 
